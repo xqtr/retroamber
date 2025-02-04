@@ -1,0 +1,430 @@
+<!--
+Theme: RetroAmber
+version: 1.0
+author: xqtr // https://cp737.net
+license: creative commons CC-BY-NC-SA
+This theme is a combination of other various themes, with elements that i liked.
+It uses:
+- consoles/logos and font from Pixel theme
+- bottom bar from carbon
+- detail/basic mask screen from TechDweebs theme
+- sound, rating from SNES Mini theme
+- Some textformat that i fount at the CRT theme
+
+Background images generated with OpenGPT.
+-->
+
+<theme>
+  <formatVersion>4</formatVersion>
+    
+  <variables>
+    <colororange>E6823A</colororange>
+    <themecolor>${colororange}</themecolor>
+    <themeartfolder>./../art</themeartfolder>
+    <themefont>${themeartfolder}/font.ttf</themefont>
+    <themescrollsound>${themeartfolder}/scroll.wav</themescrollsound>
+  </variables>
+
+  <view name="system">
+    <image name="logo">
+			<path>${themeartfolder}/systems/${system.theme}/logo.png</path>
+		</image>
+    
+    <image name="background" extra="true">
+      <tile>false</tile>
+      <pos>0 0</pos>
+      <origin>0 0</origin>
+      <size>1 1</size>
+      <path>${themeartfolder}/ps2.jpg</path>
+    </image>
+    
+    <text name="logoText">
+			<fontPath>${themefont}</fontPath>
+			<forceUppercase>false</forceUppercase>
+			<color>${themecolor}</color>
+		</text>
+      
+    <carousel name="systemcarousel">
+      <pos>0 0.62</pos>
+      <size>1 0.26</size>
+      <color>000000aa</color>
+      <logoSize>0.16 0.09</logoSize>
+      <logoScale>2 2</logoScale>
+    </carousel> 
+    
+    <text name="systemInfo">
+      <pos>0.0 0.83</pos>
+      <color>ffffff80</color>
+      <fontPath>${themefont}</fontPath>
+      <fontSize>0.027</fontSize>
+    </text>
+   
+    <image name="bottom" extra="true">
+			<path>${themeartfolder}/bottom.png</path>
+			<size>1 0.055</size>
+			<pos>0 1</pos>
+			<origin>0 1</origin>
+			<color>${themecolor}</color>
+		</image>
+  
+    <helpsystem name="help">
+      <pos>0.012 0.962</pos>
+      <textColor>ffffff</textColor>
+      <iconColor>ffffff</iconColor>
+      <fontPath>${themefont}</fontPath>
+      <fontSize>0.033</fontSize>
+    </helpsystem>
+  </view>
+  <!-- end system -->
+  
+  <!-- hide all metadata by default -->
+	<view name="basic, detailed, video, grid">
+		<text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_developer, md_lbl_publisher, md_publisher, md_lbl_genre, md_genre, md_lbl_players, md_players, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_description, md_name">
+			<visible>false</visible>
+      <color>${themecolor}</color>
+      <fontPath>${themefont}</fontPath>
+      <fontSize>0.04</fontSize>
+		</text>
+
+		<datetime name="md_releasedate, md_lastplayed">
+			<visible>false</visible>
+		</datetime>
+
+		<rating name="md_rating">
+			<visible>false</visible>
+		</rating>
+
+		<image name="md_thumbnail, md_image, md_marquee">
+			<visible>false</visible>
+		</image>
+
+		<video name="md_video">
+			<visible>false</visible>
+		</video>
+	</view>
+  
+	<view name="basic">
+    
+		<image name="background" extra="true">
+      <path>${themeartfolder}/bg-dark.png</path>
+      <tile>false</tile>
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+		</image>
+    
+     <image name="md-media-mask" extra="true">
+      <path>${themeartfolder}/fullscreen-default-grid.png</path>
+      <size>1 0.5</size>
+      <color>${themecolor}</color>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+    </image>
+    
+    <image name="console" extra="true">
+			<path>${themeartfolder}/systems/${system.theme}/console.png</path>
+			<maxSize>0.2 0.17</maxSize>
+			<pos>0.9 0.01</pos>
+			<origin>0.5 0</origin>
+			<color>${themecolor}</color>
+		</image>
+
+		<image name="bottom" extra="true">
+			<path>${themeartfolder}/bottom.png</path>
+			<size>1 0.055</size>
+			<pos>0 1</pos>
+			<origin>0 1</origin>
+			<color>${themecolor}</color>
+		</image>
+  
+    <helpsystem name="help">
+      <pos>0.012 0.962</pos>
+      <textColor>ffffff</textColor>
+      <iconColor>ffffff</iconColor>
+      <fontPath>${themefont}</fontPath>
+      <fontSize>0.033</fontSize>
+    </helpsystem>
+		
+		<textlist name="gamelist">
+			<pos>0.014 0.135</pos>
+			<size>0.953 0.8</size>
+			<alignment>center</alignment>
+			<horizontalMargin>0.01</horizontalMargin>
+			<fontPath>${themefont}</fontPath>
+			<fontSize>0.04</fontSize>
+			<selectorImagePath>${themeartfolder}/selector-basic.png</selectorImagePath>
+			<selectorImageTile>false</selectorImageTile>
+			<selectorOffsetY>0.0</selectorOffsetY>
+			<selectorHeight>0.06</selectorHeight>
+			<selectorColor>ffffff</selectorColor>
+			<selectedColor>ffffff</selectedColor>
+			<primaryColor>ffffff</primaryColor>
+			<secondaryColor>ffffff</secondaryColor>
+			<forceUppercase>1</forceUppercase>
+			<scrollSound>${themescrollsound}</scrollSound>
+		</textlist>
+    
+    <image name="logo">
+			<path>${themeartfolder}/systems/${system.theme}/logo.png</path>
+			<maxSize>0.2 0.18</maxSize>
+			<pos>0.12 0.07</pos>
+			<origin>0.5 0.5</origin>
+		</image>
+	</view>
+  <!-- end basic -->
+  
+  <view name="grid">
+		
+    <image name="background" extra="true">
+      <path>${themeartfolder}/bg-dark.png</path>
+      <tile>false</tile>
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+		</image>
+    
+     <image name="md-media-mask" extra="true">
+      <path>${themeartfolder}/fullscreen-default-grid.png</path>
+      <size>1 0.5</size>
+      <color>${themecolor}</color>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+    </image>
+    
+    <image name="console" extra="true">
+			<path>${themeartfolder}/systems/${system.theme}/console.png</path>
+			<maxSize>0.2 0.17</maxSize>
+			<pos>0.9 0.01</pos>
+			<origin>0.5 0</origin>
+			<color>${themecolor}</color>
+		</image>
+    
+    <image name="logo">
+			<path>${themeartfolder}/systems/${system.theme}/logo.png</path>
+			<maxSize>0.2 0.18</maxSize>
+			<pos>0.12 0.07</pos>
+			<origin>0.5 0.5</origin>
+		</image>
+    
+    <imagegrid name="gamegrid">
+			<size>1 0.6</size>
+			<pos>0 0.2</pos>
+			<margin>0 0</margin>
+			<scrollDirection>vertical</scrollDirection>
+			<animate>true</animate>
+		</imagegrid>
+
+		<gridtile name="default">
+			<size>0.32 0.32</size>
+			<padding>0.05 0.05</padding>
+			<imageColor>${themecolor}</imageColor>
+			<backgroundColor>ffffff00</backgroundColor>
+		</gridtile>
+
+		<gridtile name="selected">
+			<size>0.32 0.32</size>
+			<padding>0 0</padding>
+			<imageColor>ffffffff</imageColor>
+			<backgroundColor>ffffff00</backgroundColor>
+		</gridtile>
+
+		<text name="md_name">
+			<fontPath>${themefont}</fontPath>
+			<fontSize>0.04</fontSize>
+			<forceUppercase>true</forceUppercase>
+			<size>0.9 0.045</size>
+			<pos>0.01 0.88</pos>
+			<alignment>center</alignment>
+			<color>ffffff</color>
+			<visible>true</visible>
+		</text>
+    
+    <image name="bottom" extra="true">
+			<path>${themeartfolder}/bottom.png</path>
+			<size>1 0.055</size>
+			<pos>0 1</pos>
+			<origin>0 1</origin>
+			<color>${themecolor}</color>
+		</image>
+  
+    <helpsystem name="help">
+      <pos>0.012 0.962</pos>
+      <textColor>ffffff</textColor>
+      <iconColor>ffffff</iconColor>
+      <fontPath>${themefont}</fontPath>
+      <fontSize>0.033</fontSize>
+    </helpsystem>
+	</view>
+  <!-- end grid -->
+
+	<view name="detailed, video">
+    
+    <image name="background" extra="true">
+			<path>${themeartfolder}/fullscreen-crt.png</path>
+			<tile>false</tile>
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+		</image>
+    
+    <image name="md-media-mask" extra="true">
+      <path>${themeartfolder}/fullscreen-default.png</path>
+      <size>1 1</size>
+      <color>${themecolor}</color>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+    </image>		
+
+		<image name="logo">
+			<path>${themeartfolder}/systems/${system.theme}/logo.png</path>
+			<pos>0.2 0.06</pos>
+			<maxSize>0.4 0.1</maxSize>
+			<origin>0.5 0.5</origin>
+		</image>
+
+		<text name="logoText">
+			<fontPath>${themeartfolder}/font.ttf</fontPath>
+			<fontSize>0.04</fontSize>
+			<forceUppercase>true</forceUppercase>
+			<size>0.7 0.1</size>
+			<pos>0.02 0.017</pos>
+			<color>${themecolor}</color>
+		</text>
+	
+		<image name="md_image">
+			<pos>0.766 0.322</pos>
+			<maxSize>0.366 0.480</maxSize>
+			<origin>0.5 0.5</origin>
+		</image>
+		
+		<textlist name="gamelist">
+			<pos>0.008 0.14</pos>
+			<size>0.38 0.8</size>
+			<alignment>left</alignment>
+			<lineSpacing>1.8</lineSpacing>
+      <horizontalMargin>0</horizontalMargin>
+			<fontPath>${themefont}</fontPath>
+			<fontSize>0.03</fontSize>
+			<selectorImagePath>${themeartfolder}/selector.png</selectorImagePath>
+			<selectorImageTile>false</selectorImageTile>
+			<selectorOffsetY>0</selectorOffsetY>
+			<selectorHeight>0.04</selectorHeight>
+			<selectorColor>ffffff</selectorColor>
+			<selectedColor>ffffff</selectedColor>
+			<primaryColor>ffffff</primaryColor>
+			<secondaryColor>${themecolor}</secondaryColor>
+			<forceUppercase>0</forceUppercase>
+			<scrollSound>${themescrollsound}</scrollSound>
+		</textlist>
+
+    <image name="bottom" extra="true">
+			<path>${themeartfolder}/bottom.png</path>
+			<size>1 0.055</size>
+			<pos>0 1</pos>
+			<origin>0 1</origin>
+			<color>${themecolor}</color>
+		</image>
+  
+    <helpsystem name="help">
+      <pos>0.012 0.962</pos>
+      <textColor>ffffff</textColor>
+      <iconColor>ffffff</iconColor>
+      <fontPath>${themefont}</fontPath>
+      <fontSize>0.033</fontSize>
+    </helpsystem>		
+	</view>	
+  
+  <!-- end detail/video -->
+	
+<view name="video">
+		<video name="md_video">
+      <pos>0.754 0.37</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.405 0.405</maxSize>
+      <visible>true</visible>
+			<delay>2</delay>
+			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+		</video>
+	</view>
+		
+	<view name="detailed, video">
+    <text name="md_developer, md_genre, md_players, md_releasedate,md_name">
+			<color>7F7F7F</color>
+			<pos>1 1</pos>
+			<forceUppercase>1</forceUppercase>
+			<fontPath>${themefont}</fontPath>
+			<fontSize>0.03</fontSize>
+      <visible>true</visible>
+		</text>
+
+    <datetime name="md_releasedate">
+      <pos>0.42 0.820</pos>
+      <size>0.1 0.03</size>
+      <format>(c)%Y</format>
+      <color>7F7F7F</color>
+      <alignment>left</alignment>
+    </datetime>
+    
+    <text name="md_name">
+      <pos>0.41 0.786</pos>
+      <size>0.700 0.03</size>
+      <visible>true</visible>
+      <color>${themecolor}</color>
+      <alignment>left</alignment>
+    </text>
+    
+    <text name="md_developer">
+      <pos>0.52 0.820</pos>
+      <size>0.300 0.03</size>
+      <visible>true</visible>
+      <alignment>left</alignment>
+      <color>7F7F7F</color>
+    </text>
+    
+		<text name="md_genre">
+      <pos>0.42 0.854</pos>
+      <size>0.40 0.03</size>
+      <visible>true</visible>
+      <alignment>left</alignment>
+      <color>7F7F7F</color>
+    </text>
+		
+    <rating name="md_rating">
+      <pos>0.9 0.905</pos>
+      <visible>true</visible>
+			<size>0.0166666666666667 0.0296296296296296</size>		
+			<filledPath>${themeartfolder}/heart_filled.png</filledPath>
+			<unfilledPath>${themeartfolder}/heart_empty.png</unfilledPath>
+		</rating>
+		
+    <text name="md_players">
+			<visible>true</visible>
+      <pos>0.42 0.877</pos>
+      <fontPath>${themefont}</fontPath>		
+			<forceUppercase>1</forceUppercase>
+			<fontSize>0.03</fontSize>
+			<color>7F7F7F</color>
+			<zIndex>199</zIndex>
+		</text>
+    
+    <text name="by" extra="true">
+      <pos>0.49 0.882</pos>
+      <fontPath>${themefont}</fontPath>		
+			<forceUppercase>1</forceUppercase>
+			<fontSize>0.03</fontSize>
+      <color>7F7F7F</color>
+      <visible>true</visible>
+      <text>players</text>
+    </text>
+    
+    <image name="md_image">
+      <pos>0.754 0.37</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.405 0.405</maxSize>
+      <visible>true</visible>
+		</image>
+  
+	</view>	
+	
+</theme>

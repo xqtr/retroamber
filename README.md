@@ -29,3 +29,15 @@ So, credits for the previous elements goes to the creators of them.
 - Add more images and systems
 - Add an EmulationStation splash screen
 - Add sounds on events
+
+## ScreenShots
+
+![main](https://cp737.net/files/retropie/main.png)
+
+![basic view](https://cp737.net/files/retropie/basic.png)
+
+![detail view](https://cp737.net/files/retropie/detail.png)
+
+![grid](https://cp737.net/files/retropie/grid.png)
+
+![retropie menu](https://cp737.net/files/retropie/system.png)

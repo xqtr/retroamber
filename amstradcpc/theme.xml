@@ -35,7 +35,7 @@ Background images generated with OpenGPT.
       <pos>0 0</pos>
       <origin>0 0</origin>
       <size>1 1</size>
-      <path>${themeartfolder}/shop.jpg</path>
+      <path>${themeartfolder}/shoot.jpg</path>
     </image>
     
     <text name="logoText">
@@ -260,7 +260,7 @@ Background images generated with OpenGPT.
 	<view name="detailed, video">
     
     <image name="background" extra="true">
-			<path>${themeartfolder}/fullscreen-handheld.png</path>
+			<path>${themeartfolder}/fullscreen-crt.png</path>
 			<tile>false</tile>
 			<size>1 1</size>
 			<pos>0 0</pos>
@@ -338,7 +338,7 @@ Background images generated with OpenGPT.
 	
 <view name="video">
 		<video name="md_video">
-      <pos>0.754 0.33</pos>
+      <pos>0.754 0.37</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>0.405 0.405</maxSize>
       <visible>true</visible>
@@ -419,7 +419,7 @@ Background images generated with OpenGPT.
     </text>
     
     <image name="md_image">
-      <pos>0.754 0.33</pos>
+      <pos>0.754 0.37</pos>
 			<origin>0.5 0.5</origin>
 			<maxSize>0.405 0.405</maxSize>
       <visible>true</visible>
